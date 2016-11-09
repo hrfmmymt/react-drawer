@@ -4,7 +4,6 @@ import postcss from 'gulp-postcss';
 import stylelint from "stylelint";
 import reporter from "postcss-reporter";
 import sourcemaps from 'gulp-sourcemaps';
-import uglify from 'gulp-uglify';
 import eslint from "gulp-eslint";
 import sync from 'browser-sync';
 import autoprefixer from 'autoprefixer';
@@ -57,7 +56,6 @@ function bundle(watching = false) {
       })
       .pipe(source('bundle.js'))
       .pipe(buffer())
-      .pipe(uglify())
       .pipe(gulp.dest('public/js/'));
   }
   return bundler();

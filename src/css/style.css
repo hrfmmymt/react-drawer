@@ -25,9 +25,9 @@ html {
   background-color: #ccc;
   &[aria-hidden="false"] {
     transform: translate(0, 0);
-    transition: transform .3s linear;
+    transition: transform .2s linear;
   }
   &[aria-hidden="true"] {
-    transition: visibility 0s linear .3s, transform .3s linear;
+    transition: visibility 0s linear .2s, transform .2s linear;
   }
 }
